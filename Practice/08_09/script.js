@@ -82,8 +82,8 @@ const figure_creater = function (backpack) {
   let new_figure = document.createElement("figure");
   let new_img = document.createElement("img");
   let new_figcaption = document.createElement("figcaption");
-  new_img.setAttribute("src", frogpack.image);
-  new_figcaption.innerText = frogpack.description;
+  new_img.setAttribute("src", backpack.image);
+  new_figcaption.innerText = backpack.description;
   new_figure.append(new_img);
   new_figure.append(new_figcaption);
   return new_figure;
