@@ -22,7 +22,7 @@ const frogpack = {
     left: 10,
     right: 10,
   },
-  lidOpen: false,
+  lidOpen: true,
   image: "../../assets/images/frog.svg",
   description:
     "A green kids backpack designed to make the lid look like the face of a frog sticking out its tongue.",
