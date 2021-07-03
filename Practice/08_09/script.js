@@ -23,7 +23,7 @@ const frogpack = {
     right: 10,
   },
   description: "THIS IS THE DESCRIPTION OF A FROG BAG",
-  lidOpen: false,
+  lidOpen: true,
   image: "../../assets/images/frog.svg",
   toggleLid: function (lidStatus) {
     this.lidOpen = lidStatus;
