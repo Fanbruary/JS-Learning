@@ -49,14 +49,14 @@ const create_strap_form = function (straps) {
     <input type="number" name="New ${side}Length" placeholder="New ${side} length">
     <button>Update</button>
     `;
-    strap.append(form);
 
     form.addEventListener("submit", (event) => {
       event.preventDefault();
       let new_length = form.querySelector("input").value;
       strap.querySelector("span").innerText = `${new_length}inches`;
+      strap.querySelector("input").value = "";
     });
-    strap.querySelector("input").value = "";
+    strap.append(form);
   });
 };
 
