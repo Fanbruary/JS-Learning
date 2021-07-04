@@ -40,6 +40,26 @@ const lidToggle = function (event, button, newArg) {
     : (status.innerText = "closed");
 };
 
+const create_strap_form = function (straps) {
+  straps.forEach((strap) => {
+    let side = strap.dataset.side;
+    let form = document.createElement("form");
+    form.classList.add(`${side}length`);
+    form.innerHTML = `
+    <input type="number" name="New ${side}Length" placeholder="New ${side} length">
+    <button>Update</button>
+    `;
+    strap.append(form);
+
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+      let new_length = form.querySelector("input").value;
+      strap.querySelector("span").innerText = `${new_length}inches`;
+    });
+    strap.querySelector("input").value = "";
+  });
+};
+
 const backpackList = backpackObjectArray.map((backpack) => {
   let backpackArticle = document.createElement("article");
   backpackArticle.classList.add("backpack");
@@ -81,6 +101,10 @@ const backpackList = backpackObjectArray.map((backpack) => {
   button.addEventListener("click", (event) => {
     lidToggle(event, button, newArg);
   });
+
+  //Add strap form
+  let straps = backpackArticle.querySelectorAll(".backpack__strap");
+  create_strap_form(straps);
 
   return backpackArticle;
 });
