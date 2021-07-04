@@ -41,7 +41,6 @@ const nestedObjects = {
 const article = document.querySelector("article");
 let stuffList = document.createElement("ul");
 
-
 /**
  * for loop
  * @link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for
@@ -81,6 +80,5 @@ for (let i = 0; i < stuff.length; i++) {
 //   listItem.innerHTML = `Name: ${nestedObjects[singleObject].name}`;
 //   stuffList.append(listItem);
 // }
-
 
 article.append(stuffList);
